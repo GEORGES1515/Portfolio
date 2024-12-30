@@ -1,0 +1,133 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at top, #1a1a2e, #121212);
+  color: white;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #ffffff, #1a73e8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.content h2 {
+  font-size: 2.5rem;
+  border-bottom: 3px solid #1a73e8;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.carousel {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  margin-top: 30px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+.carousel-item img {
+  width: 80%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+footer {
+  margin-top: 50px;
+  font-size: 1rem;
+  color: #808080;
+}
+
+/* Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 100;
+  transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+  background: rgba(255, 255, 255, 0.8);
+  color: black;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+/* Add animations */
+.carousel-item {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+.carousel-item.active {
+  opacity: 1;
+  transform: scale(1);
+}
+.download-btn,
+.download-btn-overlay {
+  background: linear-gradient(to right, #1a73e8, #00c6ff);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  transition: background 0.3s;
+  text-align: center;
+}
+
+.download-btn a,
+.download-btn-overlay a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.download-btn:hover,
+.download-btn-overlay:hover {
+  background: linear-gradient(to right, #00c6ff, #1a73e8);
+  color: white;
+}
+.download-btn-overlay {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
